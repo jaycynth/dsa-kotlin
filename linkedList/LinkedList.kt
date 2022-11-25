@@ -1,6 +1,6 @@
 package linkedList
 
-class LinkedList<T> {
+open class LinkedList<T> {
 
     var head: Node<T>? = null
     var tail: Node<T>? = null
@@ -111,6 +111,33 @@ class LinkedList<T> {
         return result
     }
 
+    //Return node at the entry of a cycle and prints true if it's a cycle linked list
+    fun isCycle(): Node<T>? {
+        var slowPtr: Node<T>? = head
+        var fastPtr: Node<T>? = head
+
+        var met = false
+
+        while (fastPtr != null) {
+            fastPtr = fastPtr.next?.next
+            slowPtr = slowPtr?.next
+            if (slowPtr == fastPtr) {
+                met = true
+            }
+        }
+
+        println("Linked list is Cyclic")
+        println(met)
+
+        if (met) {
+            slowPtr = head
+            while (slowPtr != fastPtr) {
+                slowPtr = slowPtr?.next
+                fastPtr = fastPtr?.next
+            }
+        }
+        return slowPtr
+    }
 
     override fun toString(): String {
         return if (isEmpty()) {
@@ -126,13 +153,12 @@ fun main() {
 
     val values: LinkedList<Int> = LinkedList()
 
-    values.append(9).push(10)
-    println(values)
+
 
     values.push(1).push(2).push(3)
     println(values)
 
-    values.append(11).append(12)
+    values.append(4).append(5).append(6)
     println(values)
 
     val middleNode = values.nodeAt(3)
@@ -149,7 +175,7 @@ fun main() {
     values.removeAfter(middleNode)
     println(values)
 
-
-
+    values.isCycle()
+    println(values)
 
 }
