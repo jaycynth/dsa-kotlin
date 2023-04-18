@@ -136,6 +136,7 @@ open class LinkedList<T> {
                 fastPtr = fastPtr?.next
             }
         }
+
         return slowPtr
     }
 
