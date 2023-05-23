@@ -8,8 +8,8 @@ fun main(args: Array<String>) {
 //    allOperator(list)
 //    println("COUNT OPERATOR")
 //    countOperator(list)
-//    println("FOLD OPERATOR")
-//    foldOperator(list)
+    println("FOLD OPERATOR")
+    foldOperator(list)
 //    println("FOLD RIGHT OPERATOR")
 //    foldRightOperator(list)
 //    println("FOREACH OPERATOR")
@@ -17,13 +17,13 @@ fun main(args: Array<String>) {
 //    println("FOREACH INDEXED OPERATOR")
 //    forEachIndexedOperator(list)
 //    println("MAX OPERATOR")
-    maxOperator(list)
-    println("MAXBY OPERATOR")
-    maxByOperator(list)
-    println("MIN OPERATOR")
-    minOperator(list)
-    println("MINBY OPERATOR")
-    minByOperator(list)
+//    maxOperator(list)
+//    println("MAXBY OPERATOR")
+//    maxByOperator(list)
+//    println("MIN OPERATOR")
+//    minOperator(list)
+//    println("MINBY OPERATOR")
+//    minByOperator(list)
 //    println("NONE OPERATOR")
 //    noneOperator(list)
 //    println("REDUCE OPERATOR")
@@ -56,9 +56,14 @@ fun countOperator(list: List<Int>) {
 /*Returns the sum of element in the list starting with the initial value  */
 fun foldOperator(list: List<Int>) {
     println(list.fold(25) { total, next -> total + next })
+
+    // 1-2, 4-(1-2), 0-(4-(1-2)
+    println(listOf(1, 2, 4).fold(0) { total, next ->
+        total - next
+    })
 }
 
-/*Sam as fold but starts adding with the last element */
+/*Same as fold but starts adding with the last element */
 fun foldRightOperator(list: List<Int>) {
     println(list.foldRight(4) { total, next -> total + next })
 

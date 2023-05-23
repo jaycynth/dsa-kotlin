@@ -7,13 +7,13 @@ open class LinkedList<T> {
 
     private var size = 0
 
-    private fun isEmpty(): Boolean {
-        return size == 0
-    }
+    private fun isEmpty() = size == 0
+
 
     // Inserting at the beginning of the list
     fun push(value: T): LinkedList<T> {
         head = Node(value, head)
+
         if (tail == null) {
             tail = head
         }
