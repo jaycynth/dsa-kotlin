@@ -16,7 +16,7 @@ fun sortWith(arr: Array<Int>){
     println(arr.contentToString())
 
     //custom comparator -> brings reverse order
-    arr.sortWith(Comparator{ o1, o2 -> o2.compareTo(o1) })
+    arr.sortWith { o1, o2 -> o2.compareTo(o1) }
     println(arr.contentToString())
 }
 
@@ -32,18 +32,18 @@ fun sortBy(arr: Array<Int>){
 }
 
 fun sortDescending(arr: Array<Int>){
-
     arr.sortDescending()
     println(arr.contentToString())
 }
 
 fun main() {
     val arr = arrayOf(4, 2, 1, 5, 3)
-//    sort(arr)
-//
-//    val arr2 = arrayOf(40, 20, 10, 50, 30)
-//    sortIndex(arr2)
+    sort(arr)
 
-    sortWith(arr)
+    val arr2 = arrayOf(40, 20, 10, 50, 30)
+    sortIndex(arr2)
+
+    val arr3 = arrayOf(40, 20, 10, 50, 30)
+    sortWith(arr3)
 
 }

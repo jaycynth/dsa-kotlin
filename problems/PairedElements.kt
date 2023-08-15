@@ -53,7 +53,7 @@ fun orOperation() {
 
 fun main() {
 //    println(solution(intArrayOf(9, 9, 6)))
-    println(solution3(intArrayOf(9, 3,9,3,9,9,7)))
+    println(solution3(intArrayOf(9,3,9,3,9,9,7)))
 
 //    orOperation()
 }
