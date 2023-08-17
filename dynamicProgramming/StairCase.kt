@@ -39,8 +39,33 @@ fun stairCase(n: Int): Int {
     return dp[n]
 }
 
+
+
+
+/* Space complexity 0(1) */
+fun stairCaseSpaceComplexity(n: Int): Int {
+
+    var a = 1
+    var b = 1
+
+    var c = 0
+    // when n  = 4 [1,1,2,3]
+    // a,b,c
+    //   a,b,c
+
+    for (i in 2..n) {
+        c = a + b
+        a = b
+        b = c
+    }
+
+    return c
+}
+
 fun main() {
     val n = 5
+    println("Number of distinct ways one can climb to stair $n is ${stairCaseSpaceComplexity(n)}")
     println("Number of distinct ways one can climb to stair $n is ${stairCase(n)}")
+
 
 }
