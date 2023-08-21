@@ -8,9 +8,6 @@ internal class KStepsRedStairCaseKtTest {
 
     @Test
     fun kStepsRedStairCase() {
-        assertEquals(
-            2,
-            kStepsRedStairCase(7, 3, booleanArrayOf(false, true, false, true, true, false, false))
-        )
+        assertEquals(2, kStepsRedStairCase(7, 3, booleanArrayOf(false, true, false, true, true, false, false)))
     }
 }

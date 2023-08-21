@@ -12,7 +12,6 @@ Recurrence relation:
 	f(n) = f(n-1) + n
  */
 
-
 fun nSum(n: Int): Int {
     val dp = IntArray(n+1)
     dp[0] = 0

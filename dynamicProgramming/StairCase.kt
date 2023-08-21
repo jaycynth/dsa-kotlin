@@ -67,5 +67,4 @@ fun main() {
     println("Number of distinct ways one can climb to stair $n is ${stairCaseSpaceComplexity(n)}")
     println("Number of distinct ways one can climb to stair $n is ${stairCase(n)}")
 
-
 }

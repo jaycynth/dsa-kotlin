@@ -19,6 +19,4 @@ internal class StairCaseKtTest {
         assertNotEquals(13, stairCase(5))
     }
 
-
-
 }
